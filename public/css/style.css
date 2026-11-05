@@ -1,0 +1,68 @@
+@import 'tailwindcss';
+
+/* ===== Variabel warna: ubah di sini kalau mau ganti tema ===== */
+:root {
+    --bg: #0b0d12;
+    --card: #151922;
+    --text: #e8eaf0;
+    --muted: #9aa3b5;
+    --accent: #4da3ff;
+    --border: #232938;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: "Segoe UI", system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+.container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+
+/* ===== Navbar ===== */
+nav { border-bottom: 1px solid var(--border); position: sticky; top: 0; background: var(--bg); }
+nav .container { display: flex; justify-content: space-between; align-items: center; height: 60px; }
+nav a {
+    color: var(--muted); text-decoration: none;
+    margin-left: 18px; padding: 6px 0;
+    border-bottom: 2px solid transparent;
+}
+nav a:hover { color: var(--accent); }
+nav a.active { color: var(--accent); border-bottom-color: var(--accent); }
+
+/* ===== Umum ===== */
+section { padding: 50px 0; }
+h1 { font-size: 3rem; text-align: center; }
+h2 { margin-bottom: 20px; }
+h3 { margin: 24px 0 12px; }
+.subtitle { text-align: center; color: var(--accent); letter-spacing: 2px; margin: 6px 0 20px; }
+.intro { color: var(--muted); text-align: center; margin-bottom: 40px; }
+
+/* ===== Kartu ===== */
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
+.card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 20px; }
+.card h4 { color: var(--accent); margin-bottom: 6px; }
+.card p, .post p { color: var(--muted); }
+
+/* ===== About ===== */
+.profile p { margin-bottom: 4px; }
+.profile span { color: var(--muted); display: inline-block; width: 150px; }
+
+table { width: 100%; border-collapse: collapse; background: var(--card); }
+th, td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); }
+th { color: var(--accent); }
+td:first-child { width: 90px; font-weight: 600; }
+
+.quote { border-left: 4px solid var(--accent); background: var(--card); padding: 16px 20px; color: var(--muted); }
+
+/* ===== Blog ===== */
+.post { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 22px; margin-bottom: 16px; }
+.post h3 { margin-top: 0; }
+
+/* ===== HP ===== */
+@media (max-width: 600px) {
+    .profile span { display: block; width: auto; }
+    nav a { margin-left: 12px; }
+}
