@@ -14,7 +14,7 @@
     {{-- Navbar --}}
     @include('partials.navbar')
 
-    {{-- Isi halaman (homepage / about / blog) masuk di sini --}}
+    {{-- Isi halaman --}}
     <main class="mx-auto max-w-4xl px-5">
         @yield('content')
     </main>
